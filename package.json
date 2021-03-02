@@ -1,0 +1,27 @@
+{
+  "name": "negoziacf_app",
+  "version": "1.0.0",
+  "description": "This is a web app that crafted with PostgreSQL, Node.js/Express.js & React. The app simulates a dashboard where the users can manage their information based on the roles they have.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "PostgreSQL",
+    "Node.js",
+    "JavaScript",
+    "Express.js",
+    "React",
+    "Fintech",
+    "WebApp."
+  ],
+  "author": "@mosqueradvd, <David Mosquera>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

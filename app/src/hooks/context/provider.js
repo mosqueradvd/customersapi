@@ -25,7 +25,7 @@ export function MainProvider(props) {
 
   async function editCustomer(id, body) {
     try {
-      dispatch({ type: customerActions.EDIT_CUSTOMER, body })
+      dispatch({ type: customerActions.EDIT_CUSTOMER, payload: body })
       const response = await Axios.put(`${URL}/customers/${id}`, body)
       if (response.data.ok === true) {
         dispatch({ type: customerActions.EDIT_CUSTOMER_SUCCESS })

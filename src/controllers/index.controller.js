@@ -10,17 +10,15 @@ const pool = new Pool({
 
 const getCustomers = async (req, res) => {
   const response = await pool.query('SELECT * FROM customers')
-  console.log('response', response.rows)
   res.status(200).json(response.rows)
 }
 
 const createCustomers = async (req, res) => {
   const { name, country, email } = req.body
-  const response = await pool.query(
+  await pool.query(
     'INSERT INTO customers (name, country, email) VALUES ($1, $2, $3)',
     [name, country, email]
   )
-  console.log(response)
   res.json({
     msg: 'Customer created succesfully!',
     body: {

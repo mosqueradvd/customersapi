@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useCustomers } from '../hooks/context/provider'
+import { useCustomers } from '../context/provider'
 import Navbar from '../components/Navbar'
 
 const EditCustomer = () => {

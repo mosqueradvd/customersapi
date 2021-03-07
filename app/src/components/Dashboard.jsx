@@ -1,7 +1,13 @@
+import CustomersViewOnly from '../components/CustomersViewOnly'
 import CustomersView from '../components/CustomersView'
 import Navbar from '../components/Navbar'
+import { connect } from 'react-redux'
 
-const Dashboard = ({ children }) => {
+const Dashboard = (props) => {
+  const { users } = props
+  console.log('users obj', Object.keys(users).length)
+  console.log('users norm', users)
+
   return (
     <div>
       <Navbar />
@@ -14,7 +20,7 @@ const Dashboard = ({ children }) => {
         <div className='max-w-7xl mx-auto py-6 sm:px-6 lg:px-8'>
           <div className='px-4 py-6 sm:px-0'>
             <div className='border-4 border-dashed border-gray-200 rounded-lg h-96'>
-              <CustomersView />
+              {users ? <CustomersView /> : <CustomersViewOnly />}
             </div>
           </div>
         </div>
@@ -23,4 +29,10 @@ const Dashboard = ({ children }) => {
   )
 }
 
-export default Dashboard
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+  }
+}
+
+export default connect(mapStateToProps, null)(Dashboard)

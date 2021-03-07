@@ -8,7 +8,6 @@ export const initialState = {
 }
 
 export function customerReducer(state, action) {
-  console.log('state >>>', state)
   switch (action.type) {
     case customerActions.CREATE_CUSTOMER:
       return {
@@ -51,9 +50,6 @@ export function customerReducer(state, action) {
       }
 
     case customerActions.EDIT_CUSTOMER:
-      // const updatedCustom = action.payload
-      // const updateCustomer =
-      // if(updatedCustom)
       return {
         ...state,
         fetching: true,

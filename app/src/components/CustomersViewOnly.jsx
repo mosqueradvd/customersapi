@@ -90,7 +90,7 @@ function CustomersView() {
                             Active
                           </span>
                         </td>
-                        <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                        {/* <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
                           <button
                             className='bg-red-300 hover:bg-red-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center'
                             onClick={() => deleteCustomer(customer.id)}
@@ -111,8 +111,8 @@ function CustomersView() {
                             </svg>
                             <span>Delete</span>
                           </button>
-                        </td>
-                        <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
+                        </td> */}
+                        {/* <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
                           <a
                             href='#'
                             className='text-indigo-600 hover:text-indigo-900'
@@ -136,7 +136,7 @@ function CustomersView() {
                               </button>
                             </Link>
                           </a>
-                        </td>
+                        </td> */}
                       </tr>
                     ))
                   )}

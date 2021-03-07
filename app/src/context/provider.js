@@ -1,6 +1,6 @@
 import React, { useReducer, useMemo, useContext } from 'react'
-import { customerActions } from '../actions/customerActions'
-import { initialState, customerReducer } from '../reducer/customerReducer'
+import { customerActions } from '../dux/actions/customerActions'
+import { initialState, customerReducer } from '../dux/reducer/customerReducer'
 import Axios from 'axios'
 
 const CustomerContext = React.createContext()

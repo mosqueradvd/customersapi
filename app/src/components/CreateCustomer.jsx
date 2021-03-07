@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { useCustomers } from '../hooks/context/provider'
+import { useCustomers } from '../context/provider'
 
 const CreateCustomer = () => {
   const custom = useCustomers()
